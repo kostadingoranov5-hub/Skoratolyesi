@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkorAtölyesi</title>
+<style>
+body{margin:0;font-family:Arial;background:#0b1220;color:#fff}
+header{padding:15px;border-bottom:1px solid #333}
+.card{margin:15px;padding:15px;background:#141b2d;border-radius:12px}
+.match{padding:10px;border-bottom:1px solid #333;cursor:pointer}
+.match:hover{background:#1c2440}
+.score{font-size:36px;font-weight:bold}
+</style>
+</head>
+<body>
+
+<header>
+<h2>SkorAtölyesi</h2>
+<p>Tüm ligler • Canlı demo</p>
+</header>
+
+<div class="card">
+<div class="match" onclick="show('Fenerbahçe','Galatasaray')">Fenerbahçe vs Galatasaray</div>
+<div class="match" onclick="show('Arsenal','Liverpool')">Arsenal vs Liverpool</div>
+<div class="match" onclick="show('Real Madrid','Barcelona')">Real Madrid vs Barcelona</div>
+</div>
+
+<div class="card">
+<div id="info">Bir maç seç</div>
+<div class="score" id="score">—</div>
+</div>
+
+<script>
+function show(h,a){
+ document.getElementById("info").innerText=h+" - "+a;
+ document.getElementById("score").innerText=
+ Math.floor(Math.random()*3)+" - "+Math.floor(Math.random()*3);
+}
+</script>
+
+</body>
+</html>
